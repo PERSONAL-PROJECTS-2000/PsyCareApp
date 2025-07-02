@@ -21,8 +21,8 @@ const PersonalEntries: React.FC = () => {
   const [editingEntry, setEditingEntry] = useState<string | null>(null);
   const [newEntry, setNewEntry] = useState({ title: '', content: '' });
 
-  const activeEntries = journalEntries.filter(entry => !entry.isDeleted);
-  const activeThoughts = positiveThoughts.filter(thought => !thought.isDeleted);
+  const activeEntries = journalEntries.filter(entry => !entry.is_deleted);
+  const activeThoughts = positiveThoughts.filter(thought => !thought.is_deleted);
 
   const formatText = (command: string) => {
     document.execCommand(command, false);

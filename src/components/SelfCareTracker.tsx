@@ -21,7 +21,7 @@ const SelfCareTracker: React.FC = () => {
       } else {
         addHabit({
           ...newHabit,
-          isCompleted: false
+          is_completed: false
         });
       }
       
@@ -45,34 +45,34 @@ const SelfCareTracker: React.FC = () => {
     setSelectAll(newSelectAll);
     
     habits.forEach(habit => {
-      updateHabit(habit.id, { isCompleted: newSelectAll });
+      updateHabit(habit.id, { is_completed: newSelectAll });
       
       if (newSelectAll) {
         const today = new Date().toISOString().split('T')[0];
-        const updatedDates = habit.completedDates.includes(today) 
-          ? habit.completedDates 
-          : [...habit.completedDates, today];
-        updateHabit(habit.id, { completedDates: updatedDates });
+        const updatedDates = habit.completed_dates.includes(today) 
+          ? habit.completed_dates 
+          : [...habit.completed_dates, today];
+        updateHabit(habit.id, { completed_dates: updatedDates });
       }
     });
   };
 
-  const handleHabitToggle = (habitId: string, isCompleted: boolean) => {
-    updateHabit(habitId, { isCompleted });
+  const handleHabitToggle = (habitId: string, is_completed: boolean) => {
+    updateHabit(habitId, { is_completed });
     
     const today = new Date().toISOString().split('T')[0];
     const habit = habits.find(h => h.id === habitId);
     
     if (habit) {
-      let updatedDates = [...habit.completedDates];
+      let updatedDates = [...habit.completed_dates];
       
-      if (isCompleted && !updatedDates.includes(today)) {
+      if (is_completed && !updatedDates.includes(today)) {
         updatedDates.push(today);
-      } else if (!isCompleted) {
+      } else if (!is_completed) {
         updatedDates = updatedDates.filter(date => date !== today);
       }
       
-      updateHabit(habitId, { completedDates: updatedDates });
+      updateHabit(habitId, { completed_dates: updatedDates });
     }
   };
 
@@ -86,7 +86,7 @@ const SelfCareTracker: React.FC = () => {
 
     return last7Days.map(date => {
       const completedCount = habits.filter(habit => 
-        habit.completedDates.includes(date)
+        habit.completed_dates.includes(date)
       ).length;
       
       const percentage = habits.length > 0 ? (completedCount / habits.length) * 100 : 0;
@@ -112,7 +112,7 @@ const SelfCareTracker: React.FC = () => {
     }).reverse();
 
     const completedDays = last30Days.filter(date => 
-      habit.completedDates.includes(date)
+      habit.completed_dates.includes(date)
     ).length;
 
     return [
@@ -168,17 +168,17 @@ const SelfCareTracker: React.FC = () => {
                 <div className="flex items-center space-x-3 flex-1">
                   <input
                     type="checkbox"
-                    checked={habit.isCompleted}
+                    checked={habit.is_completed}
                     onChange={(e) => handleHabitToggle(habit.id, e.target.checked)}
                     className="w-5 h-5 text-pink-500 rounded focus:ring-pink-400"
                   />
                   <div className="flex-1">
-                    <h4 className={`font-semibold ${habit.isCompleted ? 'line-through text-gray-500' : 'text-gray-800'}`}>
+                    <h4 className={`font-semibold ${habit.is_completed ? 'line-through text-gray-500' : 'text-gray-800'}`}>
                       {habit.name}
                     </h4>
                     <p className="text-sm text-gray-600">Time: {habit.time}</p>
                     <p className="text-sm text-gray-500">
-                      Completed {habit.completedDates.length} times
+                      Completed {habit.completed_dates.length} times
                     </p>
                   </div>
                 </div>

@@ -30,8 +30,8 @@ const Dashboard: React.FC = () => {
 
   // Mindfulness Progress
   const getMindfulnessProgress = () => {
-    const targetActivities = mindfulnessActivities.filter(activity => activity.isTarget);
-    const completedActivities = targetActivities.filter(activity => activity.isCompleted);
+    const targetActivities = mindfulnessActivities.filter(activity => activity.is_target);
+    const completedActivities = targetActivities.filter(activity => activity.is_completed);
     const percentage = targetActivities.length > 0 ? (completedActivities.length / targetActivities.length) * 100 : 0;
     
     return [
@@ -45,7 +45,7 @@ const Dashboard: React.FC = () => {
     const categories = ['Daily', 'Weekly', 'Monthly', 'Yearly'];
     return categories.map(category => {
       const categoryGoals = goals.filter(goal => goal.category === category);
-      const completedGoals = categoryGoals.filter(goal => goal.isCompleted);
+      const completedGoals = categoryGoals.filter(goal => goal.is_completed);
       const percentage = categoryGoals.length > 0 ? (completedGoals.length / categoryGoals.length) * 100 : 0;
       
       return {
@@ -68,7 +68,7 @@ const Dashboard: React.FC = () => {
 
     return last7Days.map(date => {
       const completedCount = habits.filter(habit => 
-        habit.completedDates.includes(date)
+        habit.completed_dates.includes(date)
       ).length;
       
       const percentage = habits.length > 0 ? (completedCount / habits.length) * 100 : 0;
@@ -244,7 +244,7 @@ const Dashboard: React.FC = () => {
             className="bg-gradient-to-r from-blue-400 to-indigo-400 rounded-2xl p-4 text-white"
           >
             <h5 className="font-semibold mb-1">Active Goals</h5>
-            <p className="text-2xl font-bold">{goals.filter(g => !g.isCompleted).length}</p>
+            <p className="text-2xl font-bold">{goals.filter(g => !g.is_completed).length}</p>
           </motion.div>
           
           <motion.div

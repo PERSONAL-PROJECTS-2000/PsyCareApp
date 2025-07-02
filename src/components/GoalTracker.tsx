@@ -26,8 +26,8 @@ const GoalTracker: React.FC = () => {
       } else {
         addGoal({
           ...newGoal,
-          recordDate: today,
-          isCompleted: false
+          record_date: today,
+          is_completed: false
         });
       }
       
@@ -53,7 +53,7 @@ const GoalTracker: React.FC = () => {
     }
 
     return goals.filter(goal => {
-      const targetDate = searchType === 'record' ? goal.recordDate : goal.deadline;
+      const targetDate = searchType === 'record' ? goal.record_date : goal.deadline;
       return targetDate === searchDate;
     });
   };
@@ -62,7 +62,7 @@ const GoalTracker: React.FC = () => {
     const categories = ['Daily', 'Weekly', 'Monthly', 'Yearly'];
     return categories.map(category => {
       const categoryGoals = goals.filter(goal => goal.category === category);
-      const completedGoals = categoryGoals.filter(goal => goal.isCompleted);
+      const completedGoals = categoryGoals.filter(goal => goal.is_completed);
       const percentage = categoryGoals.length > 0 ? (completedGoals.length / categoryGoals.length) * 100 : 0;
       
       return {
@@ -77,7 +77,7 @@ const GoalTracker: React.FC = () => {
   const isDeadlineMissed = (goal: any) => {
     if (!goal.deadline) return false;
     const today = new Date().toISOString().split('T')[0];
-    return goal.deadline < today && !goal.isCompleted;
+    return goal.deadline < today && !goal.is_completed;
   };
 
   return (
@@ -150,19 +150,19 @@ const GoalTracker: React.FC = () => {
                 <div className="flex items-center space-x-3 flex-1">
                   <input
                     type="checkbox"
-                    checked={goal.isCompleted}
-                    onChange={(e) => updateGoal(goal.id, { isCompleted: e.target.checked })}
+                    checked={goal.is_completed}
+                    onChange={(e) => updateGoal(goal.id, { is_completed: e.target.checked })}
                     className="w-5 h-5 text-pink-500 rounded focus:ring-pink-400"
                   />
                   <div className="flex-1">
-                    <h4 className={`font-semibold ${goal.isCompleted ? 'line-through text-gray-500' : 'text-gray-800'}`}>
+                    <h4 className={`font-semibold ${goal.is_completed ? 'line-through text-gray-500' : 'text-gray-800'}`}>
                       {goal.name}
                     </h4>
                     <div className="flex items-center space-x-4 text-sm text-gray-600">
                       <span className="bg-pink-100 text-pink-700 px-2 py-1 rounded-full">
                         {goal.category}
                       </span>
-                      <span>Recorded: {new Date(goal.recordDate).toLocaleDateString()}</span>
+                      <span>Recorded: {new Date(goal.record_date).toLocaleDateString()}</span>
                       {goal.deadline && (
                         <span className={isDeadlineMissed(goal) ? 'text-red-600 font-medium' : ''}>
                           Deadline: {new Date(goal.deadline).toLocaleDateString()}
@@ -174,7 +174,7 @@ const GoalTracker: React.FC = () => {
                         ⚠️ Deadline missed
                       </div>
                     )}
-                    {goal.isCompleted && (
+                    {goal.is_completed && (
                       <div className="text-green-600 text-sm font-medium mt-1">
                         ✅ Congratulations! Goal achieved!
                       </div>

@@ -26,15 +26,15 @@ const MindfulnessTracker: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       mindfulnessActivities.forEach(activity => {
-        if (activity.isRunning && activity.timeRemaining > 0) {
+        if (activity.is_running && activity.time_remaining > 0) {
           updateMindfulnessActivity(activity.id, {
-            timeRemaining: activity.timeRemaining - 1
+            time_remaining: activity.time_remaining - 1
           });
-        } else if (activity.isRunning && activity.timeRemaining <= 0) {
+        } else if (activity.is_running && activity.time_remaining <= 0) {
           updateMindfulnessActivity(activity.id, {
-            isRunning: false,
-            isCompleted: true,
-            timeRemaining: activity.timer * 60
+            is_running: false,
+            is_completed: true,
+            time_remaining: activity.timer * 60
           });
         }
       });
@@ -64,7 +64,7 @@ const MindfulnessTracker: React.FC = () => {
     const activity = mindfulnessActivities.find(a => a.id === activityId);
     if (activity) {
       updateMindfulnessActivity(activityId, {
-        isRunning: !activity.isRunning
+        is_running: !activity.is_running
       });
     }
   };
@@ -126,8 +126,8 @@ const MindfulnessTracker: React.FC = () => {
                 <div className="flex items-center space-x-3">
                   <input
                     type="checkbox"
-                    checked={activity.isTarget}
-                    onChange={(e) => updateMindfulnessActivity(activity.id, { isTarget: e.target.checked })}
+                    checked={activity.is_target}
+                    onChange={(e) => updateMindfulnessActivity(activity.id, { is_target: e.target.checked })}
                     className="w-5 h-5 text-pink-500 rounded-full focus:ring-pink-400"
                   />
                   <h4 className="font-semibold text-gray-700">{activity.name}</h4>
@@ -160,18 +160,18 @@ const MindfulnessTracker: React.FC = () => {
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-600">Timer</label>
                   <div className="bg-white/50 rounded-lg p-2 text-center font-mono text-lg">
-                    {formatTime(activity.timeRemaining)}
+                    {formatTime(activity.time_remaining)}
                   </div>
                   <button
                     onClick={() => handleStartTimer(activity.id)}
                     className={`w-full py-1 px-3 rounded-lg text-sm transition-colors flex items-center justify-center space-x-1 ${
-                      activity.isRunning
+                      activity.is_running
                         ? 'bg-red-100 hover:bg-red-200 text-red-700'
                         : 'bg-green-100 hover:bg-green-200 text-green-700'
                     }`}
                   >
-                    {activity.isRunning ? <Pause size={16} /> : <Play size={16} />}
-                    <span>{activity.isRunning ? 'Pause' : 'Start'}</span>
+                    {activity.is_running ? <Pause size={16} /> : <Play size={16} />}
+                    <span>{activity.is_running ? 'Pause' : 'Start'}</span>
                   </button>
                 </div>
 
@@ -180,12 +180,12 @@ const MindfulnessTracker: React.FC = () => {
                   <div className="flex items-center justify-center">
                     <input
                       type="checkbox"
-                      checked={activity.isCompleted}
-                      onChange={(e) => updateMindfulnessActivity(activity.id, { isCompleted: e.target.checked })}
+                      checked={activity.is_completed}
+                      onChange={(e) => updateMindfulnessActivity(activity.id, { is_completed: e.target.checked })}
                       className="w-6 h-6 text-pink-500 rounded focus:ring-pink-400"
                     />
                   </div>
-                  {activity.isCompleted && (
+                  {activity.is_completed && (
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}

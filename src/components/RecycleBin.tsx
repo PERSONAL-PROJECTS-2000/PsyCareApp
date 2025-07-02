@@ -78,10 +78,10 @@ const RecycleBin: React.FC = () => {
                         <Calendar size={14} />
                         <span>Created: {new Date(entry.date).toLocaleDateString()}</span>
                       </div>
-                      {entry.deletedDate && (
+                      {entry.deleted_date && (
                         <div className="flex items-center space-x-1">
                           <Trash2 size={14} />
-                          <span>Deleted: {new Date(entry.deletedDate).toLocaleDateString()}</span>
+                          <span>Deleted: {new Date(entry.deleted_date).toLocaleDateString()}</span>
                         </div>
                       )}
                     </div>
