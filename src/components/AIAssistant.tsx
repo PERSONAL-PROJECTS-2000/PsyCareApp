@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useAuth } from '../contexts/AuthContext';
 
 const AIAssistant: React.FC = () => {
-  const { user } = useAuth();
+  const { profile } = useAuth();
   const widgetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -22,20 +22,20 @@ const AIAssistant: React.FC = () => {
         // Set language based on user profile
         if (profile?.language) {
           const languageMap: { [key: string]: string } = {
-            'English': 'en',
-            'Spanish': 'es',
-            'French': 'fr',
-            'German': 'de',
-            'Chinese': 'zh',
-            'Japanese': 'ja',
-            'Arabic': 'ar',
-            'Hindi': 'hi',
-            'Portuguese': 'pt',
-            'Russian': 'ru',
-            'Italian': 'it'
+            'English': 'English',
+            'Spanish': 'Spanish',
+            'French': 'French',
+            'German': 'German',
+            'Chinese': 'Chinese',
+            'Japanese': 'Japanese',
+            'Arabic': 'Arabic',
+            'Hindi': 'Hindi',
+            'Portuguese': 'Portugese',
+            'Russian': 'Russian',
+            'Italian': 'Italian'
           };
           
-          const languageCode = languageMap[user.language] || 'en';
+          const languageCode = languageMap[profile.language] || 'en';
           widget.setAttribute('override-language', languageCode);
         }
         
@@ -53,7 +53,7 @@ const AIAssistant: React.FC = () => {
         document.head.removeChild(script);
       }
     };
-  }, [user?.language]);
+  }, [profile?.language]);
 
   return (
     <div className="space-y-6">
