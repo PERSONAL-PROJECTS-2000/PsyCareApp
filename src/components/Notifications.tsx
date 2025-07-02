@@ -4,17 +4,29 @@ import { useData } from '../contexts/DataContext';
 import { useAuth } from '../contexts/AuthContext';
 import { Bell, Clock, Target, Calendar, CheckCircle } from 'lucide-react';
 
+type NotificationCategory = 'goal-overdue' | 'goal' | 'mindfulness' | 'habit';
+
+interface AppNotification {
+  id: string;
+  type: NotificationCategory;
+  title: string;
+  message: string;
+  time: string;
+  icon: React.ElementType;
+  color: string;
+}
+
 const Notifications: React.FC = () => {
   const { mindfulnessActivities, goals, habits } = useData();
   const { profile } = useAuth();
-  const [notifications, setNotifications] = useState<any[]>([]);
+  const [notifications, setNotifications] = useState<AppNotification[]>([]);
 
   useEffect(() => {
     generateNotifications();
   }, [mindfulnessActivities, goals, habits, profile]);
 
   const generateNotifications = () => {
-    const newNotifications: any[] = [];
+    const newNotifications: AppNotification[] = [];
     const now = new Date();
     const today = now.toISOString().split('T')[0];
 
