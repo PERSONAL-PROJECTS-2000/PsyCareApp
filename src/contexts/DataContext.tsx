@@ -281,7 +281,7 @@ export const DataProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   // Mindfulness Activities
-  const addMindfulnessActivity = async (activity: Omit<MindfulnessActivity, 'id' | 'user_id' | 'created_at' | 'updated_at'>) => {
+  const addMindfulnessActivity = async (activity: Omit<MindfulnessActivity, 'id' | 'user_id' | 'created_at' | 'updated_at' | 'is_completed' | 'is_target' | 'is_running' | 'time_remaining'>) => {
     if (!user) return;
 
     const { data, error } = await supabase
