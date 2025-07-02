@@ -35,7 +35,7 @@ const AIAssistant: React.FC = () => {
             'Italian': 'Italian'
           };
           
-          const languageCode = languageMap[profile.language] || 'en';
+          const languageCode = languageMap[profile.language] || 'English';
           widget.setAttribute('override-language', languageCode);
         }
         
