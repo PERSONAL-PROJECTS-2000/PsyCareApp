@@ -21,7 +21,7 @@ interface DataContextType {
   resources: Resource[];
   loading: boolean;
   addMoodEntry: (entry: Omit<MoodEntry, 'id' | 'user_id' | 'created_at'>) => Promise<void>;
-  addMindfulnessActivity: (activity: Omit<MindfulnessActivity, 'id' | 'user_id' | 'created_at' | 'updated_at'>) => Promise<void>;
+  addMindfulnessActivity: (activity: Omit<MindfulnessActivity, 'id' | 'user_id' | 'created_at' | 'updated_at' | 'is_completed' | 'is_target' | 'is_running' | 'time_remaining'>) => Promise<void>;
   updateMindfulnessActivity: (id: string, updates: Partial<MindfulnessActivity>) => Promise<void>;
   addJournalEntry: (entry: Omit<JournalEntry, 'id' | 'user_id' | 'created_at' | 'updated_at'>) => Promise<void>;
   updateJournalEntry: (id: string, updates: Partial<JournalEntry>) => Promise<void>;
