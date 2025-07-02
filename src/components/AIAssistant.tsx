@@ -20,7 +20,7 @@ const AIAssistant: React.FC = () => {
         widget.setAttribute('agent-id', 'agent_01jz0m68a3fvwb0xvjsf7fsq09');
         
         // Set language based on user profile
-        if (user?.language) {
+        if (profile?.language) {
           const languageMap: { [key: string]: string } = {
             'English': 'en',
             'Spanish': 'es',
