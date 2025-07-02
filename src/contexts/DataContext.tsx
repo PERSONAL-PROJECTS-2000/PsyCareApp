@@ -23,11 +23,11 @@ interface DataContextType {
   addMoodEntry: (entry: Omit<MoodEntry, 'id' | 'user_id' | 'created_at'>) => Promise<void>;
   addMindfulnessActivity: (activity: Omit<MindfulnessActivity, 'id' | 'user_id' | 'created_at' | 'updated_at' | 'is_completed' | 'is_target' | 'is_running' | 'time_remaining'>) => Promise<void>;
   updateMindfulnessActivity: (id: string, updates: Partial<MindfulnessActivity>) => Promise<void>;
-  addJournalEntry: (entry: Omit<JournalEntry, 'id' | 'user_id' | 'created_at' | 'updated_at'>) => Promise<void>;
+  addJournalEntry: (entry: Omit<JournalEntry, 'id' | 'user_id' | 'created_at' | 'updated_at' | 'is_deleted'>) => Promise<void>;
   updateJournalEntry: (id: string, updates: Partial<JournalEntry>) => Promise<void>;
   deleteJournalEntry: (id: string) => Promise<void>;
   restoreJournalEntry: (id: string) => Promise<void>;
-  addPositiveThought: (thought: Omit<PositiveThought, 'id' | 'user_id' | 'created_at' | 'updated_at'>) => Promise<void>;
+  addPositiveThought: (thought: Omit<PositiveThought, 'id' | 'user_id' | 'created_at' | 'updated_at' | 'is_deleted'>) => Promise<void>;
   updatePositiveThought: (id: string, updates: Partial<PositiveThought>) => Promise<void>;
   deletePositiveThought: (id: string) => Promise<void>;
   restorePositiveThought: (id: string) => Promise<void>;
@@ -330,7 +330,7 @@ export const DataProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   // Journal Entries
-  const addJournalEntry = async (entry: Omit<JournalEntry, 'id' | 'user_id' | 'created_at' | 'updated_at'>) => {
+  const addJournalEntry = async (entry: Omit<JournalEntry, 'id' | 'user_id' | 'created_at' | 'updated_at' | 'is_deleted'>) => {
     if (!user) return;
 
     const { data, error } = await supabase
@@ -426,7 +426,7 @@ export const DataProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   // Positive Thoughts
-  const addPositiveThought = async (thought: Omit<PositiveThought, 'id' | 'user_id' | 'created_at' | 'updated_at'>) => {
+  const addPositiveThought = async (thought: Omit<PositiveThought, 'id' | 'user_id' | 'created_at' | 'updated_at' | 'is_deleted'>) => {
     if (!user) return;
 
     const { data, error } = await supabase
