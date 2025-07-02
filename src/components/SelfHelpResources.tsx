@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useData } from '../contexts/DataContext';
-import { Plus, Edit, Trash2, ExternalLink, Upload } from 'lucide-react';
+import { Plus, Edit, Trash2, ExternalLink } from 'lucide-react';
 
 const SelfHelpResources: React.FC = () => {
   const { resources, addResource, updateResource, deleteResource } = useData();
