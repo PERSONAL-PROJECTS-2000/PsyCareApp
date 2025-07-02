@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useData } from '../contexts/DataContext';
-import { Plus, Edit, Trash2, CheckSquare } from 'lucide-react';
+import { Plus, Edit, Trash2 } from 'lucide-react';
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
 const SelfCareTracker: React.FC = () => {
