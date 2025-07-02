@@ -34,7 +34,7 @@ interface DataContextType {
   addGoal: (goal: Omit<Goal, 'id' | 'user_id' | 'created_at' | 'updated_at'>) => Promise<void>;
   updateGoal: (id: string, updates: Partial<Goal>) => Promise<void>;
   deleteGoal: (id: string) => Promise<void>;
-  addHabit: (habit: Omit<Habit, 'id' | 'user_id' | 'created_at' | 'updated_at'>) => Promise<void>;
+  addHabit: (habit: Omit<Habit, 'id' | 'user_id' | 'created_at' | 'updated_at' | 'completed_dates'>) => Promise<void>;
   updateHabit: (id: string, updates: Partial<Habit>) => Promise<void>;
   deleteHabit: (id: string) => Promise<void>;
   addResource: (resource: Omit<Resource, 'id' | 'user_id' | 'created_at' | 'updated_at'>) => Promise<void>;
@@ -585,7 +585,7 @@ export const DataProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   // Habits
-  const addHabit = async (habit: Omit<Habit, 'id' | 'user_id' | 'created_at' | 'updated_at'>) => {
+  const addHabit = async (habit: Omit<Habit, 'id' | 'user_id' | 'created_at' | 'updated_at' | 'completed_dates'>) => {
     if (!user) return;
 
     const { data, error } = await supabase
