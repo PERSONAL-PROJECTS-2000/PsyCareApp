@@ -311,6 +311,39 @@ const MindfulnessTracker: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      {/* Settings Dialog */}
+      <AnimatePresence>
+        {showSettingsDialog && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="bg-white rounded-3xl p-6 w-full max-w-md shadow-2xl"
+            >
+              <h3 className="text-xl font-bold text-gray-800 mb-4">
+                Activity Settings
+              </h3>
+              
+              <p className="text-gray-700 mb-4">Settings for activity ID: {showSettingsDialog}</p>
+
+              <div className="flex space-x-3 mt-6">
+                <button
+                  onClick={() => setShowSettingsDialog(null)}
+                  className="flex-1 bg-gray-100 text-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-200 transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
