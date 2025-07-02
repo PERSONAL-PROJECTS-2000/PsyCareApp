@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useData } from '../contexts/DataContext';
 import { useAuth } from '../contexts/AuthContext';
-import { Play, Pause, Settings, Trash2, Target, Plus } from 'lucide-react';
+import { Play, Pause, Settings, Trash2, Plus } from 'lucide-react';
 import { DateTime } from 'luxon';
 
 const activities = ['Meditation', 'Yoga', 'Exercise', 'Reading'];
