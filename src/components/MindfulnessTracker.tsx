@@ -50,11 +50,11 @@ const MindfulnessTracker: React.FC = () => {
   };
 
   const getTimezoneTime = (time: string) => {
-    if (!user?.timezone) return time;
+    if (!profile?.timezone) return time;
     
     const [hours, minutes] = time.split(':');
     const dt = DateTime.now()
-      .setZone(user.timezone)
+      .setZone(profile.timezone)
       .set({ hour: parseInt(hours), minute: parseInt(minutes) });
     
     return dt.toFormat('HH:mm');
