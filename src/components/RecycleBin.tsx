@@ -9,8 +9,7 @@ const RecycleBin: React.FC = () => {
     restoreJournalEntry, 
     restorePositiveThought, 
     emptyRecycleBin,
-    journalEntries,
-    positiveThoughts
+    journalEntries
   } = useData();
 
   const deletedEntries = getDeletedEntries();
