@@ -1,6 +1,146 @@
 {
   "version": 0.1,
   "files": {
+    "components/AIAssistant.tsx": {
+      "scopes": {
+        "3/0/init/body/3/argument/1/1": {
+          "type": "element",
+          "hash": "d3a99564e2405aa0c91b4cb476533731",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Friendly AI Assistant"
+        },
+        "3/0/init/body/3/argument/1/3/1/1/1": {
+          "type": "element",
+          "hash": "12fa0a6b30a4217cee6433a24a6e6052",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🤖"
+        },
+        "3/0/init/body/3/argument/1/3/1/3": {
+          "type": "element",
+          "hash": "b028dc4ee5f13eec50407ad85d9f02b2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Your Personal Mental Health Companion"
+        },
+        "3/0/init/body/3/argument/1/3/1/5": {
+          "type": "element",
+          "hash": "2c6cee5a585785071f6a98aee136e0d7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Chat with our AI assistant for support, guidance, and mindfulness tips. Available 24/7 to help you on your wellness journey."
+        },
+        "3/0/init/body/3/argument/1/3/5/1/3": {
+          "type": "element",
+          "hash": "ebe04b2ab817821ed5f02a3598ed457e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading AI Assistant..."
+        },
+        "3/0/init/body/3/argument/1/3/7/1/1/3": {
+          "type": "element",
+          "hash": "3d3e4d5fa769d398ddf410d3eb45f42a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Available 24/7"
+        },
+        "3/0/init/body/3/argument/1/3/7/1/3/3": {
+          "type": "element",
+          "hash": "1af0ed0244ea428e34a3f2322614c0ad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Voice & Text Chat"
+        },
+        "3/0/init/body/3/argument/1/3/7/1/5/3": {
+          "type": "element",
+          "hash": "206cca9ac4dc6f872af77da392954c28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Multilingual Support"
+        },
+        "3/0/init/body/3/argument/1/5/1/1": {
+          "type": "element",
+          "hash": "36b41dd48cdd4c3b4a0e0a9654fc9fb9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💭"
+        },
+        "3/0/init/body/3/argument/1/5/1/3": {
+          "type": "element",
+          "hash": "c30c7f8d188b807825de11aad3f92ba8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Mental Health Support"
+        },
+        "3/0/init/body/3/argument/1/5/1/5": {
+          "type": "element",
+          "hash": "ffe0de7b07db999e79078939a45ee844",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Get guidance on managing stress, anxiety, and emotional well-being"
+        },
+        "3/0/init/body/3/argument/1/5/3/1": {
+          "type": "element",
+          "hash": "2f4f24cccdbac9bab7ee07c582a17b66",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🧘"
+        },
+        "3/0/init/body/3/argument/1/5/3/3": {
+          "type": "element",
+          "hash": "4ac2b8f0b4280dfcd6a7b2c32576aa50",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Mindfulness Tips"
+        },
+        "3/0/init/body/3/argument/1/5/3/5": {
+          "type": "element",
+          "hash": "3e20245d2966d29b08eab9254658a4ed",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Learn meditation techniques and mindfulness practices"
+        },
+        "3/0/init/body/3/argument/1/5/5/1": {
+          "type": "element",
+          "hash": "e9ccaa9e862e29ab29f7e973859cbf87",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🎯"
+        },
+        "3/0/init/body/3/argument/1/5/5/3": {
+          "type": "element",
+          "hash": "daba5fd60e4ab21349525e334b492318",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Goal Setting"
+        },
+        "3/0/init/body/3/argument/1/5/5/5": {
+          "type": "element",
+          "hash": "076840d7ba918c01e589269134a92345",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Get help setting and achieving your wellness goals"
+        }
+      }
+    },
     "components/AuthPage.tsx": {
       "scopes": {
         "3/0/init/body/7/argument/1/1/1": {
@@ -142,6 +282,178 @@
           "skip": false,
           "overrides": {},
           "content": "Goals Progress by Category"
+        }
+      }
+    },
+    "components/GoalTracker.tsx": {
+      "scopes": {
+        "5/0/init/body/12/argument/1/1/1": {
+          "type": "element",
+          "hash": "8c324e65ad82a2ed084fb6c4e2a7b03a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Goal Tracker"
+        },
+        "5/0/init/body/12/argument/1/1/3/3": {
+          "type": "element",
+          "hash": "99c5c89683403aa2cd66170cd13353d6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Add Goal"
+        },
+        "5/0/init/body/12/argument/1/5/1/1": {
+          "type": "element",
+          "hash": "8fd5ac16ccb1f6f4e03e6f0736de43ca",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search by:"
+        },
+        "5/0/init/body/12/argument/1/5/1/3/1": {
+          "type": "element",
+          "hash": "b1dfa0f74cd35fd2da659cb444e1c070",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Record Date"
+        },
+        "5/0/init/body/12/argument/1/5/1/3/3": {
+          "type": "element",
+          "hash": "fc40737658068c88c645eed6ee9342d4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deadline"
+        },
+        "5/0/init/body/12/argument/1/5/5/3": {
+          "type": "element",
+          "hash": "41f8b0be24020281dd87b40ee2f81cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Apply filters"
+        },
+        "5/0/init/body/12/argument/1/9/1/expression/0/body/1/1/3/3/3": {
+          "type": "element",
+          "hash": "b9f5452999381f17610cbc6025896d7e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Recorded: <function:Date.toLocaleDateString/>"
+        },
+        "5/0/init/body/12/argument/1/9/1/expression/0/body/1/1/3/3/5/expression/right": {
+          "type": "element",
+          "hash": "7543ce46980d4bb357469893bb574c36",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deadline: <function:Date.toLocaleDateString/>"
+        },
+        "5/0/init/body/12/argument/1/9/1/expression/0/body/1/1/3/5/expression/right": {
+          "type": "element",
+          "hash": "cd2d052c460ac2abbc6fc40a699970ca",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "⚠️ Deadline missed"
+        },
+        "5/0/init/body/12/argument/1/9/1/expression/0/body/1/1/3/7/expression/right": {
+          "type": "element",
+          "hash": "4db93a4cf005973365f57586ed927988",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "✅ Congratulations! Goal achieved!"
+        },
+        "5/0/init/body/12/argument/5/1": {
+          "type": "element",
+          "hash": "3aa10ae0789ed0b2880aabcb2b0dd027",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Goal Progress by Category"
+        },
+        "5/0/init/body/12/argument/9/expression/right/1/3/1/1": {
+          "type": "element",
+          "hash": "c2935a53240b1ded4f1072f5d505dda0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Goal Name"
+        },
+        "5/0/init/body/12/argument/9/expression/right/1/3/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "e50fe7dae1a5b76e7f0f8e7dba3ee664",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter goal name"
+        },
+        "5/0/init/body/12/argument/9/expression/right/1/3/3/1": {
+          "type": "element",
+          "hash": "1b0340cd175aa5a2be745a0d54908466",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Category"
+        },
+        "5/0/init/body/12/argument/9/expression/right/1/3/3/3/1": {
+          "type": "element",
+          "hash": "5574eee83ead295147d3a9ae2e62bb8c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Daily"
+        },
+        "5/0/init/body/12/argument/9/expression/right/1/3/3/3/3": {
+          "type": "element",
+          "hash": "9e687411dbf1248496a4ae5dd5391679",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Weekly"
+        },
+        "5/0/init/body/12/argument/9/expression/right/1/3/3/3/5": {
+          "type": "element",
+          "hash": "818f1192e32bb855597f930d3e78806e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Monthly"
+        },
+        "5/0/init/body/12/argument/9/expression/right/1/3/3/3/7": {
+          "type": "element",
+          "hash": "87f43e016c19cb25860f456549a2f431",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Yearly"
+        },
+        "5/0/init/body/12/argument/9/expression/right/1/3/5/1": {
+          "type": "element",
+          "hash": "f519bf087f5611279401546f48f597cb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Deadline (Optional)"
+        },
+        "5/0/init/body/12/argument/9/expression/right/1/5/1": {
+          "type": "element",
+          "hash": "5936f87dccc089542c7871a72ed1dacf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cancel"
+        },
+        "5/0/init/body/12/argument/9/expression/right/1/5/3": {
+          "type": "element",
+          "hash": "ac5db471a650dac9acf1d930c8c08a49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save Goal"
         }
       }
     },
@@ -337,6 +649,270 @@
         }
       }
     },
+    "components/MindfulnessTracker.tsx": {
+      "scopes": {
+        "7/0/init/body/15/argument/1/1/1": {
+          "type": "element",
+          "hash": "d62cae0200784530d09cee9b63f6830e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Daily Mindfulness & Meditation"
+        },
+        "7/0/init/body/15/argument/1/1/3/3": {
+          "type": "element",
+          "hash": "a173f92e581f5752f9b951d359e2bd5f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Add Activity"
+        },
+        "7/0/init/body/15/argument/1/3/1/expression/0/body/1/1/5": {
+          "type": "element",
+          "hash": "1409f9e98be0e57da01149ada6e30953",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "({activity.activity})"
+        },
+        "7/0/init/body/15/argument/1/3/1/expression/0/body/3/1/1": {
+          "type": "element",
+          "hash": "06a6faf228a12cbd0e330f6c451239bd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Alarm"
+        },
+        "7/0/init/body/15/argument/1/3/1/expression/0/body/3/1/5": {
+          "type": "element",
+          "hash": "998f9f3fbeee339eba0692e43fd6e236",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Set Alarm"
+        },
+        "7/0/init/body/15/argument/1/3/1/expression/0/body/3/3/1": {
+          "type": "element",
+          "hash": "2dbada7c52be0990fb6e5ec6983685ea",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Timer"
+        },
+        "7/0/init/body/15/argument/1/3/1/expression/0/body/3/5/1": {
+          "type": "element",
+          "hash": "92cfb1558e08dc6b370871aa6b27ac20",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completion"
+        },
+        "7/0/init/body/15/argument/1/3/1/expression/0/body/3/5/5/expression/right": {
+          "type": "element",
+          "hash": "0822bc3ccd09357c74cd5a7c7ada1ca5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "✨ Well done! ✨"
+        },
+        "7/0/init/body/15/argument/5/1/expression/right/1/1": {
+          "type": "element",
+          "hash": "9b51b7c004dd72d04bb6d9e7810e8757",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Add New Activity"
+        },
+        "7/0/init/body/15/argument/5/1/expression/right/1/3/1/1": {
+          "type": "element",
+          "hash": "01d3236cd6080129dc7d111794794698",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Activity Name"
+        },
+        "7/0/init/body/15/argument/5/1/expression/right/1/3/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "780a8cc2ef3bd7e25fb0ebc03ce69c07",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter activity name"
+        },
+        "7/0/init/body/15/argument/5/1/expression/right/1/3/3/1": {
+          "type": "element",
+          "hash": "cea39f23d2b443735e3c12372c234ba9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Activity Type"
+        },
+        "7/0/init/body/15/argument/5/1/expression/right/1/3/3/3/3/expression/alternate/1-placeholder": {
+          "type": "attribute",
+          "hash": "e881bdc27a3f08197f480336281f6513",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Custom activity name"
+        },
+        "7/0/init/body/15/argument/5/1/expression/right/1/3/3/3/3/expression/alternate/3": {
+          "type": "element",
+          "hash": "cb34fb3f08495abb08045fcf829a7c3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Add"
+        },
+        "7/0/init/body/15/argument/5/1/expression/right/1/3/3/3/3/expression/consequent": {
+          "type": "element",
+          "hash": "62e5c429f4870b24802dd3fbbc121112",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "+ Add custom activity"
+        },
+        "7/0/init/body/15/argument/5/1/expression/right/1/3/5/1": {
+          "type": "element",
+          "hash": "31d75f44939a2edfed571fc6c1b291cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Alarm Time"
+        },
+        "7/0/init/body/15/argument/5/1/expression/right/1/3/7/1": {
+          "type": "element",
+          "hash": "8d0039a48430e6a7fe81257e62704e56",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Timer Duration (minutes)"
+        },
+        "7/0/init/body/15/argument/5/1/expression/right/1/5/1": {
+          "type": "element",
+          "hash": "25b06367926e28e1cf86d51b92ed9802",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cancel"
+        },
+        "7/0/init/body/15/argument/5/1/expression/right/1/5/3": {
+          "type": "element",
+          "hash": "89333b4e94be24d022739d6a3f58aec8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Add Activity"
+        },
+        "7/0/init/body/15/argument/9/1/expression/right/1/1": {
+          "type": "element",
+          "hash": "c7db8486c4da3918548a4086f97ca08e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Activity Settings"
+        },
+        "7/0/init/body/15/argument/9/1/expression/right/1/3": {
+          "type": "element",
+          "hash": "bf8b04daaffa96cc84787d46951fe33b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Settings for activity ID: {showSettingsDialog}"
+        },
+        "7/0/init/body/15/argument/9/1/expression/right/1/5/1": {
+          "type": "element",
+          "hash": "92ebbab712edc93e5ba24e1534795dac",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Close"
+        }
+      }
+    },
+    "components/MoodTracker.tsx": {
+      "scopes": {
+        "5/0/init/body/6/argument/1/1": {
+          "type": "element",
+          "hash": "20cf0c3476c88ce675aa1c38865342cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Daily Mood Tracker"
+        },
+        "5/0/init/body/6/argument/1/3/1/expression/0/body/5/3/1": {
+          "type": "element",
+          "hash": "1ece64eb125a035164192e2eaf714ca0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "1"
+        },
+        "5/0/init/body/6/argument/1/3/1/expression/0/body/5/3/11": {
+          "type": "element",
+          "hash": "96ae0f9e95b0178ffd9078494cba386a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "6"
+        },
+        "5/0/init/body/6/argument/1/3/1/expression/0/body/5/3/13": {
+          "type": "element",
+          "hash": "630b2591fdb31c593489728eca8388b5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "7"
+        },
+        "5/0/init/body/6/argument/1/3/1/expression/0/body/5/3/3": {
+          "type": "element",
+          "hash": "969b44032c99b5efb54f78e9c95d16f0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "2"
+        },
+        "5/0/init/body/6/argument/1/3/1/expression/0/body/5/3/5": {
+          "type": "element",
+          "hash": "e50c7ae359983791380f62fd061b3bb6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "3"
+        },
+        "5/0/init/body/6/argument/1/3/1/expression/0/body/5/3/7": {
+          "type": "element",
+          "hash": "ffacf6641976ed5ef76edd45fba94413",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "4"
+        },
+        "5/0/init/body/6/argument/1/3/1/expression/0/body/5/3/9": {
+          "type": "element",
+          "hash": "1ca5010e2cefa72820ba8a61ce60b74f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "5"
+        },
+        "5/0/init/body/6/argument/1/5": {
+          "type": "element",
+          "hash": "1798079bb1f45c2f7b7f8f715a01e92c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save Today's Mood"
+        },
+        "5/0/init/body/6/argument/5/1": {
+          "type": "element",
+          "hash": "059b2c66bee4125997822f970df94aa3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Weekly Mood Trends"
+        }
+      }
+    },
     "components/Notifications.tsx": {
       "scopes": {
         "7/0/init/body/7/argument/1/1/1": {
@@ -442,6 +1018,194 @@
           "skip": false,
           "overrides": {},
           "content": "No new notifications at the moment."
+        }
+      }
+    },
+    "components/PersonalEntries.tsx": {
+      "scopes": {
+        "4/0/init/body/13/0/init/body/11/argument/3/1": {
+          "type": "element",
+          "hash": "3b32ac0f13383ecdf580b4db09773fda",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sun"
+        },
+        "4/0/init/body/13/0/init/body/11/argument/3/11": {
+          "type": "element",
+          "hash": "4029492def3bd66fa5a9d1c693743b62",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Fri"
+        },
+        "4/0/init/body/13/0/init/body/11/argument/3/13": {
+          "type": "element",
+          "hash": "0f0718f17b758ea9d5167c120c230be6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sat"
+        },
+        "4/0/init/body/13/0/init/body/11/argument/3/3": {
+          "type": "element",
+          "hash": "b29e2b72f74643194654961775178fec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Mon"
+        },
+        "4/0/init/body/13/0/init/body/11/argument/3/5": {
+          "type": "element",
+          "hash": "b750502bab403473852a20cea73dcf2c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tue"
+        },
+        "4/0/init/body/13/0/init/body/11/argument/3/7": {
+          "type": "element",
+          "hash": "4786ce2a2427ad9183ef1a6f7385fb24",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Wed"
+        },
+        "4/0/init/body/13/0/init/body/11/argument/3/9": {
+          "type": "element",
+          "hash": "ce25e3f9bfc6cfdc6017f791045da079",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Thu"
+        },
+        "4/0/init/body/14/argument/1/1": {
+          "type": "element",
+          "hash": "bb4409bb3f8a88af6bf154523999184e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Personal Entries"
+        },
+        "4/0/init/body/14/argument/1/5/1": {
+          "type": "element",
+          "hash": "dceeaf0a0beaacb8c08488296d43be36",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Daily Journal"
+        },
+        "4/0/init/body/14/argument/1/5/3": {
+          "type": "element",
+          "hash": "104a8d6694665669c5755ae50bf2ece6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Daily Positive Thoughts"
+        },
+        "4/0/init/body/14/argument/1/9/1/3": {
+          "type": "element",
+          "hash": "e9bbde5dc7a1d5459c91a2ed66894eed",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create <expression/>"
+        },
+        "4/0/init/body/14/argument/1/9/3/3": {
+          "type": "element",
+          "hash": "6db7077f039c878f3ec93a15e6fab003",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "View Entry Calendar"
+        },
+        "4/0/init/body/14/argument/5/1/expression/right/1/3/1/1": {
+          "type": "element",
+          "hash": "344e64395eaff6822a57d18623853e1a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Title"
+        },
+        "4/0/init/body/14/argument/5/1/expression/right/1/3/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "5cec686eaba871170dde58f6a6399f5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter title"
+        },
+        "4/0/init/body/14/argument/5/1/expression/right/1/3/3/1": {
+          "type": "element",
+          "hash": "669b337031ef165af577f04f2b7fd54f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Content"
+        },
+        "4/0/init/body/14/argument/5/1/expression/right/1/3/3/5/1-title": {
+          "type": "attribute",
+          "hash": "4d7306bc355ed2befd6a9237c5452ee6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Bold"
+        },
+        "4/0/init/body/14/argument/5/1/expression/right/1/3/3/5/3-title": {
+          "type": "attribute",
+          "hash": "555c60fb1d12ae305136202afa6deb3d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Italic"
+        },
+        "4/0/init/body/14/argument/5/1/expression/right/1/3/3/5/5-title": {
+          "type": "attribute",
+          "hash": "aed1340c6de1b829ec96c0d0da99e9ec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Underline"
+        },
+        "4/0/init/body/14/argument/5/1/expression/right/1/3/3/5/7-title": {
+          "type": "attribute",
+          "hash": "10ed24b2b8d641d31231ebbc404da196",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Bullet List"
+        },
+        "4/0/init/body/14/argument/5/1/expression/right/1/5/1": {
+          "type": "element",
+          "hash": "25b06367926e28e1cf86d51b92ed9802",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cancel"
+        },
+        "4/0/init/body/14/argument/5/1/expression/right/1/5/3": {
+          "type": "element",
+          "hash": "9366b51454658c7066c488b124d0c1cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save"
+        },
+        "4/0/init/body/14/argument/9/1/expression/right/1/1": {
+          "type": "element",
+          "hash": "1235f926201c2fa9184887af5dfb1e96",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<expression/> Calendar"
+        },
+        "4/0/init/body/14/argument/9/1/expression/right/1/5": {
+          "type": "element",
+          "hash": "1a97bc2b1ad01b81b070928d056cc66b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Close"
         }
       }
     },
@@ -669,6 +1433,114 @@
         }
       }
     },
+    "components/Quiz.tsx": {
+      "scopes": {
+        "5/0/init/body/12/consequent/0/argument/1/1": {
+          "type": "element",
+          "hash": "e75a236550af0c41ddfa9af62c8a8712",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Mental Health Quiz"
+        },
+        "5/0/init/body/12/consequent/0/argument/1/3": {
+          "type": "element",
+          "hash": "9e9ebe8a56180328b7e9c123fd70550e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Test your knowledge about mental health and wellness. Each quiz contains 5-10 randomly selected questions."
+        },
+        "5/0/init/body/12/consequent/0/argument/1/5": {
+          "type": "element",
+          "hash": "8f04efa4723b201a5543f1c59d34d972",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Start Quiz"
+        },
+        "5/0/init/body/13/consequent/2/argument/1/1": {
+          "type": "element",
+          "hash": "cc1b5484c02f6319c24ead652c31a29d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Quiz Results"
+        },
+        "5/0/init/body/13/consequent/2/argument/1/3/1": {
+          "type": "element",
+          "hash": "28499c31aff914dea6e18c0f4dfe2209",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{score}/{total}"
+        },
+        "5/0/init/body/13/consequent/2/argument/1/5/1/expression/0/body/1/3": {
+          "type": "element",
+          "hash": "95c42d89d3a7522283722d7bad2707ed",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<expression/>. {question.question}"
+        },
+        "5/0/init/body/13/consequent/2/argument/1/5/1/expression/0/body/5/1": {
+          "type": "element",
+          "hash": "d32832eb30403dc65f2b3a321ba9000c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Explanation:"
+        },
+        "5/0/init/body/13/consequent/2/argument/1/7/1/3": {
+          "type": "element",
+          "hash": "be1ff019cce22b43fd1d948e39c4e8af",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Take Another Quiz"
+        },
+        "5/0/init/body/17/argument/1/1/1": {
+          "type": "element",
+          "hash": "e75a236550af0c41ddfa9af62c8a8712",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Mental Health Quiz"
+        },
+        "5/0/init/body/17/argument/1/1/3": {
+          "type": "element",
+          "hash": "c13e620cb24248433863e90ff3545f57",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Question <expression/> of {currentQuestions.length}"
+        },
+        "5/0/init/body/17/argument/1/5/5/1/1/expression/right/3": {
+          "type": "element",
+          "hash": "c1202bb33c6cc5b29e586315cf805b7f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Important Question"
+        },
+        "5/0/init/body/17/argument/1/5/5/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "fed2b1ac6b3a3c1a697d77f86033d446",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "End Quiz"
+        },
+        "5/0/init/body/17/argument/1/5/5/3/1/expression/consequent": {
+          "type": "element",
+          "hash": "ea5b8bda4a0bfa2f569451059117a856",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Next"
+        }
+      }
+    },
     "components/RecycleBin.tsx": {
       "scopes": {
         "4/0/init/body/4/argument/1/1/1": {
@@ -750,6 +1622,214 @@
           "skip": false,
           "overrides": {},
           "content": "Deleted entries will appear here and be automatically removed after 30 days."
+        }
+      }
+    },
+    "components/SelfCareTracker.tsx": {
+      "scopes": {
+        "5/0/init/body/11/argument/1/1/1": {
+          "type": "element",
+          "hash": "03e5ff6fac5ad1bd66f6694a72e4dee9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Self-Care Habits"
+        },
+        "5/0/init/body/11/argument/1/1/3/3": {
+          "type": "element",
+          "hash": "72656425481547d39c7b6c44c3ec57f0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Add Habit"
+        },
+        "5/0/init/body/11/argument/1/5/3": {
+          "type": "element",
+          "hash": "58156b60e8e4a28c96002d096ee2a59d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select All Habits for Today"
+        },
+        "5/0/init/body/11/argument/1/9/1/expression/0/body/1/1/3/3": {
+          "type": "element",
+          "hash": "c2e9133e271319cb4924635bbbe1d261",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Time: {habit.time}"
+        },
+        "5/0/init/body/11/argument/1/9/1/expression/0/body/1/1/3/5": {
+          "type": "element",
+          "hash": "17e8177aeb91abce0c24b26163f3ff5c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Completed {habit.completed_dates.length} times"
+        },
+        "5/0/init/body/11/argument/5/3/1": {
+          "type": "element",
+          "hash": "d3eac9b1762fb76e6b533f4dc1a2aa0f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Weekly Progress"
+        },
+        "5/0/init/body/11/argument/5/7/1": {
+          "type": "element",
+          "hash": "dc0234f668df10928c4bf6a99e227ff4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Habit Progress (30 Days)"
+        },
+        "5/0/init/body/11/argument/5/7/3/expression/alternate": {
+          "type": "element",
+          "hash": "dd60613155b4c89c4a41bb29b77b6273",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No habits added yet"
+        },
+        "5/0/init/body/11/argument/9/expression/right/1/3/1/1": {
+          "type": "element",
+          "hash": "307b35018277eb91f663641fa5bcc32c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Habit Name"
+        },
+        "5/0/init/body/11/argument/9/expression/right/1/3/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "6a7e55047e1f255c5c50a0862c60dea9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter habit name"
+        },
+        "5/0/init/body/11/argument/9/expression/right/1/3/3/1": {
+          "type": "element",
+          "hash": "b504a03d52e8001bfdc5cb6205364f42",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Time"
+        },
+        "5/0/init/body/11/argument/9/expression/right/1/5/1": {
+          "type": "element",
+          "hash": "5936f87dccc089542c7871a72ed1dacf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cancel"
+        },
+        "5/0/init/body/11/argument/9/expression/right/1/5/3": {
+          "type": "element",
+          "hash": "ffbb5bb722cd1b69d476aefd4c495a4f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save Habit"
+        }
+      }
+    },
+    "components/SelfHelpResources.tsx": {
+      "scopes": {
+        "4/0/init/body/11/argument/1/1/1": {
+          "type": "element",
+          "hash": "5a155d3128f05309cedd76a28289fe1d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Self Help Resources"
+        },
+        "4/0/init/body/11/argument/1/1/3/1": {
+          "type": "element",
+          "hash": "c70f637dda8caf3fdb04a0abd43786b9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "ALWAYS REMEMBER THAT YOU ARE IRREPLACEABLE AND A GEM OF CREATION."
+        },
+        "4/0/init/body/11/argument/1/17/expression/right/1": {
+          "type": "element",
+          "hash": "fdfd6c5d9712830b2987d647b89af087",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Weekly Hobby Schedule"
+        },
+        "4/0/init/body/11/argument/1/17/expression/right/3/1/expression/0/body/1": {
+          "type": "element",
+          "hash": "85187d9f080dfa98ed18f83e2ff12f89",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{day}:"
+        },
+        "4/0/init/body/11/argument/1/17/expression/right/3/1/expression/0/body/3-placeholder": {
+          "type": "attribute",
+          "hash": "45e0fb680a7744b794cf523027ca77cf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Add hobby"
+        },
+        "4/0/init/body/11/argument/5/1/expression/right/1/3/1/1": {
+          "type": "element",
+          "hash": "344e64395eaff6822a57d18623853e1a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Title"
+        },
+        "4/0/init/body/11/argument/5/1/expression/right/1/3/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "5cec686eaba871170dde58f6a6399f5a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter title"
+        },
+        "4/0/init/body/11/argument/5/1/expression/right/1/3/3/1": {
+          "type": "element",
+          "hash": "f04471a7ddac844b9ad145eb9911ef75",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Type"
+        },
+        "4/0/init/body/11/argument/5/1/expression/right/1/3/5/1": {
+          "type": "element",
+          "hash": "669b337031ef165af577f04f2b7fd54f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Content"
+        },
+        "4/0/init/body/11/argument/5/1/expression/right/1/3/5/3/expression/consequent/3": {
+          "type": "element",
+          "hash": "fb0cc34de40851979549c6c48fa45e9f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upload {newResource.type} files from your device"
+        },
+        "4/0/init/body/11/argument/5/1/expression/right/1/5/1": {
+          "type": "element",
+          "hash": "25b06367926e28e1cf86d51b92ed9802",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cancel"
+        },
+        "4/0/init/body/11/argument/5/1/expression/right/1/5/3": {
+          "type": "element",
+          "hash": "9366b51454658c7066c488b124d0c1cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Save"
         }
       }
     },
