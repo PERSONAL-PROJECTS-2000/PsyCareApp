@@ -72,10 +72,10 @@ const PersonalEntries: React.FC = () => {
     return dates.sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
   };
 
-  const getEntriesForDate = (date: string) => {
-    const entries = activeTab === 'journal' ? activeEntries : activeThoughts;
-    return entries.filter(entry => entry.date === date);
-  };
+  //const getEntriesForDate = (date: string) => {
+    //const entries = activeTab === 'journal' ? activeEntries : activeThoughts;
+    //return entries.filter(entry => entry.date === date);
+  //};
 
   const renderCalendar = () => {
     const datesWithEntries = getEntriesWithDates();
