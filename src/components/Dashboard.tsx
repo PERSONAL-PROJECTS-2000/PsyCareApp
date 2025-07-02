@@ -32,7 +32,7 @@ const Dashboard: React.FC = () => {
   const getMindfulnessProgress = () => {
     const targetActivities = mindfulnessActivities.filter(activity => activity.is_target);
     const completedActivities = targetActivities.filter(activity => activity.is_completed);
-    const percentage = targetActivities.length > 0 ? (completedActivities.length / targetActivities.length) * 100 : 0;
+    //const percentage = targetActivities.length > 0 ? (completedActivities.length / targetActivities.length) * 100 : 0;
     
     return [
       { name: 'Completed', value: completedActivities.length, color: '#ec4899' },
