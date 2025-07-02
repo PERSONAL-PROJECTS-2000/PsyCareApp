@@ -9,7 +9,7 @@ const activities = ['Meditation', 'Yoga', 'Exercise', 'Reading'];
 
 const MindfulnessTracker: React.FC = () => {
   const { mindfulnessActivities, addMindfulnessActivity, updateMindfulnessActivity } = useData();
-  const { user } = useAuth();
+  const { profile } = useAuth();
   const [showAddDialog, setShowAddDialog] = useState(false);
   const [showSettingsDialog, setShowSettingsDialog] = useState<string | null>(null);
   const [newActivity, setNewActivity] = useState({
