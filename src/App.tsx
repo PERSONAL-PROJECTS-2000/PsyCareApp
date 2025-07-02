@@ -7,13 +7,13 @@ import './App.css';
 
 function App() {
   return (
-    <LingoProvider dictionary={{}}>
-      <AuthProvider>
-        <DataProvider>
-          <AppContent />
-        </DataProvider>
-      </AuthProvider>
-    </LingoProvider>
+    //<LingoProvider dictionary={{}}>
+  <AuthProvider>
+    <DataProvider>
+      <AppContent />
+    </DataProvider>
+  </AuthProvider>
+    //</LingoProvider>
   );
 }
 
