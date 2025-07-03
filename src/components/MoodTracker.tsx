@@ -8,13 +8,13 @@ const moodRanges = [
     id: 'sadness-happiness',
     name: 'Sadness to Happiness',
     color: 'from-blue-400 to-yellow-400',
-    emojis: ['😢', '😔', '😐', '🙂', '😊', '😄', '😁']
+    emojis: ['😢', '😔', '😐', '🙂', '😊', '😁', '😄']
   },
   {
     id: 'agitated-calm',
     name: 'Agitated to Calm',
     color: 'from-red-400 to-blue-400',
-    emojis: ['😤', '😠', '😑', '😌', '😇', '🧘', '☮️']
+    emojis: ['😤', '😠', '😑', '😌', '😇', '🕊️', '☮️']
   },
   {
     id: 'angry-peaceful',
@@ -26,7 +26,7 @@ const moodRanges = [
     id: 'depressed-lively',
     name: 'Depressed to Lively',
     color: 'from-gray-500 to-orange-400',
-    emojis: ['😞', '😔', '😐', '🙂', '😊', '😄', '🤩']
+    emojis: ['😞', '😔', '😐', '🙂', '😊', '😄', '🎉']
   },
   {
     id: 'unmotivated-motivated',
@@ -38,7 +38,7 @@ const moodRanges = [
     id: 'anxious-relaxed',
     name: 'Anxious to Relaxed',
     color: 'from-yellow-500 to-blue-400',
-    emojis: ['😰', '😟', '😐', '🙂', '😌', '😊', '🧘']
+    emojis: ['😰', '😟', '😐', '🙂', '😌', '😊', '💫']
   },
   {
     id: 'bored-entertained',
@@ -62,7 +62,7 @@ const moodRanges = [
     id: 'confused-clear',
     name: 'Confused to Clear',
     color: 'from-purple-500 to-blue-400',
-    emojis: ['😵', '😕', '😐', '🙂', '😊', '😄', '🧠']
+    emojis: ['😵', '😕', '😐', '🙂', '😊', '😄', '🎯']
   }
 ];
 
