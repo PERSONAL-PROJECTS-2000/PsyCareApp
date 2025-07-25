@@ -15,7 +15,6 @@
     "@supabase/supabase-js": "^2.39.0",
     "cross-env": "^7.0.3",
     "framer-motion": "^10.16.4",
-    "lingo.dev": "^0.103.0",
     "lucide-react": "^0.263.1",
     "luxon": "^3.4.4",
     "moment": "^2.29.4",
