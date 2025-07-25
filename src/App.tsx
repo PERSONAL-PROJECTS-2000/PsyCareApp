@@ -1,5 +1,5 @@
 //import React from 'react';
-import './App.css';
+import './main.tsx';
 import { AuthProvider } from './contexts/AuthContext';
 import { DataProvider } from './contexts/DataContext';
 //import { LingoProvider } from 'lingo.dev/react/client';
