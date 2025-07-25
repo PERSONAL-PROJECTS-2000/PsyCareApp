@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useAuth } from '../contexts/AuthContext';
 import { DateTime } from 'luxon';
-import { LocaleSwitcher } from 'lingo.dev/react/client';
+//import { LocaleSwitcher } from 'lingo.dev/react/client';
 
 const countries = [
   'United States', 'Canada', 'United Kingdom', 'Australia', 'Germany', 
