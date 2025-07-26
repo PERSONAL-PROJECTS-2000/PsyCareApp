@@ -198,7 +198,7 @@ const Profile: React.FC = () => {
               )
 
             <div>
-              <label className="block text-sm font-medium text-gray-600 mb-2">Country of Residence</label>
+              <label className="block text-sm font-medium text-gray-600 mb-2">Country of Residence</label>}
               {isEditing ? (
                 <select
                   value={profileData.country}
