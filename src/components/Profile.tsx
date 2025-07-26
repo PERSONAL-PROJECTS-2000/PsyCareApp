@@ -173,7 +173,7 @@ const Profile: React.FC = () => {
                 <div className="bg-white/40 rounded-xl p-3 border border-white/30">
                   {profile?.name || 'Not set'}
                 </div>
-              )}
+              )
 
             <div>
               <label className="block text-sm font-medium text-gray-600 mb-2">Email</label>
@@ -199,7 +199,7 @@ const Profile: React.FC = () => {
 
             <div>
               /*<label className="block text-sm font-medium text-gray-600 mb-2">Country of Residence</label>*/
-              }<label> className="block text-sm font-medium text-gray-600 mb-2">Country of Residence</label>
+              <label className="block text-sm font-medium text-gray-600 mb-2">Country of Residence</label>
               {isEditing ? (
                 <select
                   value={profileData.country}
