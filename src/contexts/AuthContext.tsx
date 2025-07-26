@@ -39,9 +39,40 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     showGreeting
   });
 
+  // ADD THESE NEW LOGS HERE
+  console.log('--- Debugging Supabase Client ---');
+  console.log('Supabase client object:', supabase);
+  console.log('Supabase auth object:', supabase.auth);
+  if (supabase && supabase.auth && typeof supabase.auth.onAuthStateChange === 'function') {
+    console.log('supabase.auth.onAuthStateChange is a function.');
+  } else {
+    console.error('ERROR: supabase.auth.onAuthStateChange is NOT a function or supabase client is not properly initialized!');
+  }
+  console.log('--- End Debugging Supabase Client ---');
+
   useEffect(() => {
     console.log('🚀 AuthProvider useEffect starting');
     
+    // Check for an initial session immediately
+    const checkInitialSession = async () => {
+        try {
+            const { data, error } = await supabase.auth.getSession();
+            console.log('✅ Initial getSession result:', { session: data.session ? 'exists' : 'null', error });
+            if (error) {
+                console.error('Error getting initial session:', error);
+            }
+            // Manually trigger the auth state change logic if session is found
+            // This is a fallback/diagnostic, onAuthStateChange should handle this
+            if (data.session) {
+                // We don't want to duplicate the listener's work, but this helps debug if listener is stuck
+                // The listener should fire for INITIAL_SESSION, but if it's not, this helps
+            }
+        } catch (err) {
+            console.error('Error in checkInitialSession:', err);
+        }
+    };
+    checkInitialSession(); // Run this once on mount
+
     // Listen for auth changes (handles both initial session and subsequent changes)
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       console.log('🔄 Auth state change:', { event, session: session ? 'exists' : 'null' });
@@ -61,7 +92,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
           setShowGreeting(false);
         }
       } catch (error) {
-        console.error('Error in auth state change:', error);
+        console.error('Error in auth state change callback:', error);
         // Reset to safe state on error
         console.log('🔄 Resetting to safe state due to error');
         setUser(null);
