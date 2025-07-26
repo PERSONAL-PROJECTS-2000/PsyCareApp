@@ -205,7 +205,7 @@ const Profile: React.FC = () => {
                   value={profileData.country}
                   onChange={(e) => setProfileData(prev => ({ ...prev, country: e.target.value }))}
                   className="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-transparent"
-                >
+                  >
                   <option value="">Select Country</option>
                   {countries.map(country => (
                     <option key={country} value={country}>{country}</option>
