@@ -174,7 +174,6 @@ const Profile: React.FC = () => {
                   {profile?.name || 'Not set'}
                 </div>
               )}
-            </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-600 mb-2">Email</label>
