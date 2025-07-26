@@ -32,17 +32,28 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   useEffect(() => {
     // Listen for auth changes (handles both initial session and subsequent changes)
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
-      setUser(session?.user ?? null);
-      
-      if (session?.user) {
-        await loadProfile(session.user.id);
-      } else {
+      try {
+        setUser(session?.user ?? null);
+        
+        if (session?.user) {
+          await loadProfile(session.user.id);
+        } else {
+          setProfile(null);
+          setShowAuth(false);
+          setShowProfileSetup(false);
+          setShowGreeting(false);
+        }
+      } catch (error) {
+        console.error('Error in auth state change:', error);
+        // Reset to safe state on error
+        setUser(null);
         setProfile(null);
         setShowAuth(false);
         setShowProfileSetup(false);
         setShowGreeting(false);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     });
 
     return () => subscription.unsubscribe();
