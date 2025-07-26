@@ -83,11 +83,19 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     console.log('📊 Loading profile for user:', userId);
     
     try {
+     console.log('🔍 About to query Supabase for profile...');
+     console.log('🌐 Supabase URL:', import.meta.env.VITE_SUPABASE_URL);
+     console.log('🔑 Supabase Key exists:', !!import.meta.env.VITE_SUPABASE_ANON_KEY);
+     
       const { data, error } = await supabase
         .from('profiles')
         .select('*')
         .eq('id', userId)
         .single();
+
+     console.log('📥 Supabase query completed');
+     console.log('📊 Query result - data:', data);
+     console.log('❌ Query result - error:', error);
 
       if (error && error.code !== 'PGRST116') {
         console.error('❌ Error loading profile:', error);
@@ -105,6 +113,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         setShowProfileSetup(true);
       }
     } catch (error) {
+     console.log('💥 Exception caught in loadProfile:', error);
       console.error('💥 Exception in loadProfile:', error);
       console.error('Error loading profile:', error);
     }
