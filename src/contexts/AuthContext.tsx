@@ -118,9 +118,15 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const updateProfile = async (profileData: Partial<Profile>) => {
     if (!user) return;
 
+    // Convert empty date_of_birth string to null for database compatibility
+    const processedProfileData = {
+      ...profileData,
+      date_of_birth: profileData.date_of_birth === '' ? null : profileData.date_of_birth
+    };
+
     const updates = {
       id: user.id,
-      ...profileData,
+      ...processedProfileData,
       updated_at: new Date().toISOString(),
     };
 
