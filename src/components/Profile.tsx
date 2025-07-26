@@ -243,7 +243,6 @@ const Profile: React.FC = () => {
                 <LocaleSwitcher locales={["en", "es", "fr", "de", "zh", "ja", "ar", "hi", "pt", "ru", "it"]} />
               </div>
             </div>
-        </div>
       </motion.div>
 
       {/* Change Password Dialog */}
