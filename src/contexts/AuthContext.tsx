@@ -91,21 +91,21 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         .from('profiles')
         .select('*')
         .eq('id', userId)
-        .single();
+        // .single(); // Temporarily remove .single() to debug
 
      console.log('📥 Supabase query completed');
      console.log('📊 Query result - data:', data);
      console.log('❌ Query result - error:', error);
 
-      if (error && error.code !== 'PGRST116') {
+      if (error) { // Check for any error
         console.error('❌ Error loading profile:', error);
         console.error('Error loading profile:', error);
         return;
       }
 
-      if (data) {
+      if (data && data.length > 0) { // Check if data exists and is not empty
         console.log('✅ Profile loaded:', data);
-        setProfile(data);
+        setProfile(data[0]); // Assuming we expect one profile, take the first one
         setShowGreeting(true);
       } else {
         // No profile exists, show profile setup
