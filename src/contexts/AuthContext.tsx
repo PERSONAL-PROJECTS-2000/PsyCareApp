@@ -29,15 +29,32 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [showProfileSetup, setShowProfileSetup] = useState(false);
   const [showGreeting, setShowGreeting] = useState(false);
 
+  // Diagnostic logging for render
+  console.log('🔍 AuthProvider render:', {
+    loading,
+    user: user ? 'exists' : 'null',
+    profile: profile ? 'exists' : 'null',
+    showAuth,
+    showProfileSetup,
+    showGreeting
+  });
+
   useEffect(() => {
+    console.log('🚀 AuthProvider useEffect starting');
+    
     // Listen for auth changes (handles both initial session and subsequent changes)
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      console.log('🔄 Auth state change:', { event, session: session ? 'exists' : 'null' });
+      
       try {
+        console.log('📝 Setting user:', session?.user ? 'exists' : 'null');
         setUser(session?.user ?? null);
         
         if (session?.user) {
+          console.log('👤 User found, loading profile for:', session.user.id);
           await loadProfile(session.user.id);
         } else {
+          console.log('❌ No user, resetting state');
           setProfile(null);
           setShowAuth(false);
           setShowProfileSetup(false);
@@ -46,20 +63,25 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       } catch (error) {
         console.error('Error in auth state change:', error);
         // Reset to safe state on error
+        console.log('🔄 Resetting to safe state due to error');
         setUser(null);
         setProfile(null);
         setShowAuth(false);
         setShowProfileSetup(false);
         setShowGreeting(false);
       } finally {
+        console.log('✅ Setting loading to false');
         setLoading(false);
       }
     });
 
+    console.log('🎧 Auth listener setup complete');
     return () => subscription.unsubscribe();
   }, []);
 
   const loadProfile = async (userId: string) => {
+    console.log('📊 Loading profile for user:', userId);
+    
     try {
       const { data, error } = await supabase
         .from('profiles')
@@ -68,18 +90,22 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         .single();
 
       if (error && error.code !== 'PGRST116') {
+        console.error('❌ Error loading profile:', error);
         console.error('Error loading profile:', error);
         return;
       }
 
       if (data) {
+        console.log('✅ Profile loaded:', data);
         setProfile(data);
         setShowGreeting(true);
       } else {
         // No profile exists, show profile setup
+        console.log('📝 No profile found, showing profile setup');
         setShowProfileSetup(true);
       }
     } catch (error) {
+      console.error('💥 Exception in loadProfile:', error);
       console.error('Error loading profile:', error);
     }
   };
