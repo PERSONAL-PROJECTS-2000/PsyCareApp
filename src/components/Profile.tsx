@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useAuth } from '../contexts/AuthContext';
 import { DateTime } from 'luxon';
-//import { LocaleSwitcher } from 'lingo.dev/react/client';
 
 const countries = [
   'United States', 'Canada', 'United Kingdom', 'Australia', 'Germany', 
@@ -107,10 +106,10 @@ const Profile: React.FC = () => {
             <button
               onClick={() => setShowPasswordDialog(true)}
               className="bg-gradient-to-r from-blue-400 to-indigo-400 text-white px-4 py-2 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-            >
+        <div className="space-y-4">
               Change Password
             </button>
-            {!isEditing ? (
+            {isEditing ? (
               <button
                 onClick={() => setIsEditing(true)}
                 className="bg-gradient-to-r from-pink-400 to-rose-400 text-white px-4 py-2 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
@@ -173,76 +172,71 @@ const Profile: React.FC = () => {
                 <div className="bg-white/40 rounded-xl p-3 border border-white/30">
                   {profile?.name || 'Not set'}
                 </div>
-              )
+            )}
+          </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-600 mb-2">Email</label>
+          <div>
+            <label className="block text-sm font-medium text-gray-600 mb-2">Email</label>
+            <div className="bg-white/40 rounded-xl p-3 border border-white/30">
+              {user?.email}
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-600 mb-2">Date of Birth (Optional)</label>
+            {isEditing ? (
+              <input
+                type="date"
+                value={profileData.date_of_birth}
+                onChange={(e) => setProfileData(prev => ({ ...prev, date_of_birth: e.target.value }))}
+                className="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-transparent"
+              />
+            ) : (
               <div className="bg-white/40 rounded-xl p-3 border border-white/30">
-                {user?.email}
+                {profile?.date_of_birth ? new Date(profile.date_of_birth).toLocaleDateString() : 'Not set'}
               </div>
-            </div>
+            )}
+          </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-600 mb-2">Date of Birth (Optional)</label>
-              {isEditing ? (
-                <input
-                  type="date"
-                  value={profileData.date_of_birth}
-                  onChange={(e) => setProfileData(prev => ({ ...prev, date_of_birth: e.target.value }))}
-                  className="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-transparent"
-                />
-              ) : (
-                <div className="bg-white/40 rounded-xl p-3 border border-white/30">
-                  {profile?.date_of_birth ? new Date(profile.date_of_birth).toLocaleDateString() : 'Not set'}
-                </div>
-              )
-
-            <div>
-              /*<label className="block text-sm font-medium text-gray-600 mb-2">Country of Residence</label>*/
-              <label className="block text-sm font-medium text-gray-600 mb-2">Country of Residence</label>
-              {isEditing ? (
-                <select
-                  value={profileData.country}
-                  onChange={(e) => setProfileData(prev => ({ ...prev, country: e.target.value }))}
-                  className="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-transparent"
-                  >
-                  <option value="">Select Country</option>
-                  {countries.map(country => (
-                    <option key={country} value={country}>{country}</option>
-                  ))}
-                </select>
-              ) : (
-                <div className="bg-white/40 rounded-xl p-3 border border-white/30">
-                  {profile?.country || 'Not set'}
-                </div>
-              )}
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-600 mb-2">Language</label>
-              {isEditing ? (
-                <select
-                  value={profileData.language}
-                  onChange={(e) => setProfileData(prev => ({ ...prev, language: e.target.value }))}
-                  className="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-transparent"
-                >
-                  {languages.map(language => (
-                    <option key={language} value={language}>{language}</option>
-                  ))}
-                </select>
-              ) : (
-                <div className="bg-white/40 rounded-xl p-3 border border-white/30">
-                  {profile?.language || 'Not set'}
-                </div>
-              )}
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-600 mb-2">Language Switcher</label>
+          <div>
+            <label className="block text-sm font-medium text-gray-600 mb-2">Country of Residence</label>
+            {isEditing ? (
+              <select
+                value={profileData.country}
+                onChange={(e) => setProfileData(prev => ({ ...prev, country: e.target.value }))}
+                className="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-transparent"
+              >
+                <option value="">Select Country</option>
+                {countries.map(country => (
+                  <option key={country} value={country}>{country}</option>
+                ))}
+              </select>
+            ) : (
               <div className="bg-white/40 rounded-xl p-3 border border-white/30">
-                <LocaleSwitcher locales={["en", "es", "fr", "de", "zh", "ja", "ar", "hi", "pt", "ru", "it"]} />
+                {profile?.country || 'Not set'}
               </div>
-            </div>
+            )}
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-600 mb-2">Language</label>
+            {isEditing ? (
+              <select
+                value={profileData.language}
+                onChange={(e) => setProfileData(prev => ({ ...prev, language: e.target.value }))}
+                className="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-transparent"
+              >
+                {languages.map(language => (
+                  <option key={language} value={language}>{language}</option>
+                ))}
+              </select>
+            ) : (
+              <div className="bg-white/40 rounded-xl p-3 border border-white/30">
+                {profile?.language || 'Not set'}
+              </div>
+            )}
+          </div>
+        </div>
       </motion.div>
 
       {/* Change Password Dialog */}
