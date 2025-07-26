@@ -17,9 +17,3 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
 })
-    plugins: [react()],
-    optimizeDeps: {
-      exclude: ['lucide-react'],
-    },
-  })
-)
