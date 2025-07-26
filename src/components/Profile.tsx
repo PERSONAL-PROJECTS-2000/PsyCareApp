@@ -196,7 +196,6 @@ const Profile: React.FC = () => {
                   {profile?.date_of_birth ? new Date(profile.date_of_birth).toLocaleDateString() : 'Not set'}
                 </div>
               )
-            </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-600 mb-2">Country of Residence</label>
