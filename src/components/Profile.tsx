@@ -195,7 +195,7 @@ const Profile: React.FC = () => {
                 <div className="bg-white/40 rounded-xl p-3 border border-white/30">
                   {profile?.date_of_birth ? new Date(profile.date_of_birth).toLocaleDateString() : 'Not set'}
                 </div>
-              )}
+              )
             </div>
 
             <div>
