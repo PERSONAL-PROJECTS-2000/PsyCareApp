@@ -106,10 +106,10 @@ const Profile: React.FC = () => {
             <button
               onClick={() => setShowPasswordDialog(true)}
               className="bg-gradient-to-r from-blue-400 to-indigo-400 text-white px-4 py-2 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-        <div className="space-y-4">
+            >
               Change Password
             </button>
-            {isEditing ? (
+            {!isEditing ? (
               <button
                 onClick={() => setIsEditing(true)}
                 className="bg-gradient-to-r from-pink-400 to-rose-400 text-white px-4 py-2 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
@@ -162,16 +162,20 @@ const Profile: React.FC = () => {
           )}
         </div>
 
-                <input
-                  type="text"
-                  value={profileData.name}
-                  onChange={(e) => setProfileData(prev => ({ ...prev, name: e.target.value }))}
-                  className="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-transparent"
-                />
-              ) : (
-                <div className="bg-white/40 rounded-xl p-3 border border-white/30">
-                  {profile?.name || 'Not set'}
-                </div>
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-600 mb-2">Name</label>
+            {isEditing ? (
+              <input
+                type="text"
+                value={profileData.name}
+                onChange={(e) => setProfileData(prev => ({ ...prev, name: e.target.value }))}
+                className="w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-transparent"
+              />
+            ) : (
+              <div className="bg-white/40 rounded-xl p-3 border border-white/30">
+                {profile?.name || 'Not set'}
+              </div>
             )}
           </div>
 
