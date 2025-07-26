@@ -1,13 +1,22 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-//import lingoCompiler from "lingo.dev/compiler"
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
 
-export default defineConfig(() =>
-  /*lingoCompiler.vite({
-    sourceRoot: "src",
-    targetLocales: ["es", "fr", "de", "zh", "ja", "ar", "hi", "pt", "ru", "it"],
-    models: "lingo.dev",
-  })*/({
+export default defineConfig({
+  css: {
+    postcss: {
+      plugins: [
+        tailwindcss,
+        autoprefixer,
+      ],
+    },
+  },
+  plugins: [react()],
+  optimizeDeps: {
+    exclude: ['lucide-react'],
+  },
+})
     plugins: [react()],
     optimizeDeps: {
       exclude: ['lucide-react'],

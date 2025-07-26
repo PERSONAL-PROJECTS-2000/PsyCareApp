@@ -16,6 +16,7 @@ interface AuthContextType {
   updateProfile: (profileData: Partial<Profile>) => Promise<void>;
   completeGreeting: () => void;
   changePassword: (newPassword: string) => Promise<void>;
+  setShowAuth: (value: boolean) => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -205,7 +206,8 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       logout,
       updateProfile,
       completeGreeting,
-      changePassword
+      changePassword,
+      setShowAuth
     }}>
       {children}
     </AuthContext.Provider>

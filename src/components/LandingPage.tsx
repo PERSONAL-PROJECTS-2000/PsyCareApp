@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useAuth } from '../contexts/AuthContext';
 
 const LandingPage: React.FC = () => {
-  const { login } = useAuth();
+  const { setShowAuth } = useAuth();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-100 via-pink-50 to-rose-100 flex items-center justify-center p-4">
@@ -42,7 +42,7 @@ const LandingPage: React.FC = () => {
           transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
         >
           <button
-            onClick={() => login('demo@example.com', 'password')}
+            onClick={() => setShowAuth(true)}
             className="bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white px-12 py-4 rounded-full text-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             Begin Your Journey
